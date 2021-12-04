@@ -1,0 +1,287 @@
+@media(min-width: 0px) and (max-width: 575px) {
+    .container {
+        max-width: 300px!important;
+    }
+    .logo {
+        width: 30px!important;
+        height: 30px!important;
+    }
+    .light {
+        font-size: 11px;
+    }
+    .bold {
+        font-size: 11px;
+    }
+    header {
+        height: 500px!important;
+    }
+    .descr {
+        padding-top: 50px!important;
+    }
+    .media-block {
+        display: none;
+    }
+    .text-block {
+        width: 100%!important;
+    }
+    .nav {
+        display: none !important;
+    }
+    .burgSelector {
+        display: flex!important;
+    }
+    .block-title {
+        font-size: 25px;
+    }
+    .btn-blue {
+        font-size: 15px;
+    }
+    .btn-white {
+        font-size: 15px;
+    }
+    .statement {
+        font-size: 10px;
+        height: 90%!important;
+    }
+    .name {
+        height: 10%!important;
+        font-size: 11px;
+    }
+    .slider-btns {
+        left: 28%!important;
+    }
+    .parag-1 {
+        font-size: 13px;
+    }
+    .parag-2 {
+        font-size: 13px;
+    }
+    .testiTitle {
+        font-size: 25px;
+    }
+    .testiDescr {
+        font-size: 15px;
+    }
+    .footerNav {
+        display: none!important;
+    }
+    .wrapper-avatars {
+        width: 300px!important;
+    }
+    .item-avatar {
+        min-width: 100px!important;
+        height: 100px!important;
+    }
+    .item-avatar img {
+        width: 60px!important;
+        height: 60px!important;
+    }
+    .controls-btns {
+        width: 300px!important;
+    }
+    .whiteArea {
+        width: 100px!important;
+        height: 100px!important;
+    }
+    .avatarActive {
+        width: 100px!important;
+        height: 100px!important;
+    }
+    .wrapper-text {
+        width: 300px!important;
+    }
+    .slider-track-text {
+        transform: translateX(-300px);
+    }
+    .workerName {
+        width: 300px!important;
+    }
+    .workerDescr {
+        width: 300px!important;
+    }
+    .form {
+        width: 300px!important;
+    }
+    .agreementText {
+        width: 150px!important;
+        font-size: 9px;
+        text-align: left;
+    }
+    .companyTitle {
+        justify-content: center;
+    }
+    .card {
+        margin-left: 10px;
+    }
+    .cardDescr {
+        font-size: 13px;
+    }
+    .testiContent {
+        flex-direction: column;
+    }
+    .testiText {
+        width: 100%!important;
+        display: flex!important;
+        flex-direction: row!important;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    .w170 {
+        height: 70px;
+        margin-left: 40px;
+    }
+    .testiSlider {
+        width: 100%!important;
+        height: 50%!important;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 500px!important;
+    }
+    .media-block {
+        display: none;
+    }
+    .text-block {
+        width: 100%!important;
+    }
+    .nav {
+        display: none !important;
+    }
+    .burgSelector {
+        display: flex!important;
+    }
+    .block-title {
+        font-size: 25px;
+    }
+    .btn-blue {
+        font-size: 15px;
+    }
+    .btn-white {
+        font-size: 15px;
+    }
+    .statement {
+        font-size: 10px;
+        height: 90%!important;
+    }
+    .name {
+        height: 10%!important;
+        font-size: 11px;
+    }
+    .slider-btns {
+        left: 28%!important;
+    }
+    .parag-1 {
+        font-size: 13px;
+    }
+    .parag-2 {
+        font-size: 13px;
+    }
+    .testiTitle {
+        font-size: 25px;
+    }
+    .testiDescr {
+        font-size: 15px;
+    }
+    .footerNav {
+        display: none!important;
+    }
+    .wrapper-text {
+        width: 450px!important;
+    }
+    .slider-track-text {
+        transform: translateX(-450px);
+    }
+    .workerName {
+        width: 450px!important;
+    }
+    .workerDescr {
+        width: 450px!important;
+    }
+    .form {
+        width: 450px!important;
+    }
+    .card {
+        margin-left: 10px;
+    }
+    .cardDescr {
+        font-size: 13px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 700px!important;
+    }
+    video {
+        width: 100%;
+        padding: 0 0px 0 70px;
+    }
+    .nav {
+        display: none !important;
+    }
+    .burgSelector {
+        display: flex!important;
+    }
+    .block-title {
+        font-size: 25px;
+    }
+    .btn-blue {
+        font-size: 15px;
+    }
+    .btn-white {
+        font-size: 15px;
+    }
+    .statement {
+        font-size: 13px;
+        height: 80%!important;
+    }
+    .name {
+        height: 20%!important;
+    }
+    .footerNav {
+        display: none!important;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 900px!important;
+    }
+    video {
+        width: 100%;
+        padding: 0 0px 0 70px;
+    }
+}
+
+@media(min-width: 1200px) and (max-width: 1299px) {
+    .container {
+        max-width: 1000px!important;
+    }
+    video {
+        width: 100%;
+        padding: 0 0px 0 70px;
+    }
+}
+
+@media(min-width: 1300px) and (max-width: 1399px) {
+    .container {
+        max-width: 1100px!important;
+    }
+    video {
+        width: 100%;
+        padding: 0 0px 0 70px;
+    }
+}
+
+@media(min-width: 1400px) {
+    .container {
+        max-width: 1400px!important;
+    }
+    video {
+        width: 100%;
+        padding: 0 0px 0 70px;
+    }
+}
