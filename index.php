@@ -10,17 +10,17 @@
             </span>
         </div>
         <div class="container cards-block">
-            <div class="card">
+            <div class="card col">
                 <img src="<?php echo get_theme_file_uri();?>/assets/img/calendar.png" alt="avatar" class="avatar">
                 <h6 class="cardTitle">Title Goes Here</h6>
                 <span class="cardDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</span>
             </div>
-            <div class="card">
+            <div class="card col">
                 <img src="<?php echo get_theme_file_uri();?>/assets/img/human.png" alt="avatar" class="avatar">
                 <h6 class="cardTitle">Title Goes Here</h6>
                 <span class="cardDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</span>
             </div>
-            <div class="card">
+            <div class="card col">
                 <img src="<?php echo get_theme_file_uri();?>/assets/img/builder.png" alt="avatar" class="avatar">
                 <h6 class="cardTitle">Title Goes Here</h6>
                 <span class="cardDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</span>
