@@ -9,23 +9,23 @@
                     </div>
                 </div>
 
-                <div class="footerNav">
-                    <a href="#">Home</a>
-                    <a href="#">Service</a>
-                    <a href="#">Extension</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Help</a>
-                </div>
+                <?php wp_nav_menu([
+                    'theme_location'  => 'primaryMenu',
+                    'menu'            => 'topMenu',
+                    'container'       => NULL,
+                    'menu_class'      => 'footerNav',
+                    'menu_id'         => 'navMenu'
+                ]); ?>
 
                 <div class="burgSelector">
                     <i class="fa fa-bars bars" aria-hidden="true"></i>
-                    <div class="footNavItems">
-                        <a href="#">Home</a>
-                        <a href="#">Service</a>
-                        <a href="#">Extension</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">Help</a>
-                    </div>
+                    <?php wp_nav_menu([
+                        'theme_location'  => 'primaryMenu',
+                        'menu'            => 'topMenu',
+                        'container'       => NULL,
+                        'menu_class'      => 'footNavItems navCheck',
+                        'menu_id'         => 'navMenu'
+                    ]); ?>
                 </div>
             </div>
         </div>

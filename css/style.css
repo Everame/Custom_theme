@@ -18,6 +18,13 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.login{
+    height: 100px;
+}
+
+.header{
     height: 700px;
 }
 
@@ -54,8 +61,17 @@ header {
     text-transform: uppercase;
 }
 
-.nav {
+.navMain {
     margin: 0 auto;
+}
+
+.navLog{
+    margin: 0 0 0 auto;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
 }
 
 .nav a {
@@ -98,9 +114,15 @@ header {
     border-radius: 5px;
 }
 
-.navItems a {
+.navItems li {
+    list-style: none;
     border-bottom: 1px solid #ABBFC6;
     padding: 5px 50px;
+    border-radius: 5px;
+}
+
+.navItems a {
+    border-bottom: 1px solid #ABBFC6;
     border-radius: 5px;
     text-align: none;
     color: black;
@@ -111,6 +133,11 @@ header {
 }
 
 .navItems a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.navItems li:hover {
     background-color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
     color: white;
@@ -211,7 +238,7 @@ header {
 .easyText {
     text-align: center;
     height: 40%;
-    padding: 5% 0;
+    padding: 3% 0;
 }
 
 .easyTitle {
@@ -245,6 +272,10 @@ header {
     border: none !important;
 }
 
+.attachment-post-thumbnail{
+    margin-bottom: 30px; 
+}
+
 .avatar {
     height: 60px;
     width: 60px;
@@ -256,6 +287,11 @@ header {
 }
 
 .cardDescr {
+    font-family: "Raleway ExtraLight";
+    color: #ABBFC6;
+}
+
+.cardDescr p {
     font-family: "Raleway ExtraLight";
     color: #ABBFC6;
 }
@@ -310,6 +346,17 @@ header {
     text-align: center;
 }
 
+.wp-block-image figure{
+    margin: 0 !important;
+    width: 250px;
+}
+
+
+.attachment-serviceThumb{
+    height: 30px;
+    width: 30px;
+}
+
 .i_line {
     height: 30px;
     width: 30px;
@@ -335,6 +382,11 @@ header {
 .btn-descr {
     display: none;
     padding-bottom: 20px;
+}
+
+.statist p{
+    color: #061E37;
+    padding-left: 10px;
 }
 
 .parag-1 {
@@ -442,10 +494,12 @@ header {
     background-color: white;
     border-radius: 5px;
     padding: 0px 20px;
+    width: 100%;
 }
 
 .name,
-.statement {
+.statement,
+.statement p {
     color: #061E37;
 }
 
@@ -453,6 +507,11 @@ header {
     display: flex;
     height: 30%;
     align-items: center;
+}
+
+.statement p {
+    height: 70%;
+    font-family: "Raleway ThinItalic";
 }
 
 .statement {
@@ -593,6 +652,16 @@ header {
 }
 
 .workerDescr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    color: #061E37;
+    font-family: "Raleway Thin";
+}
+
+.workerDescr p {
+    margin: 0;
     width: 600px;
     color: #061E37;
     font-family: "Raleway Thin";
@@ -806,6 +875,7 @@ footer {
 }
 
 .footerHead {
+    align-items: center;
     justify-content: space-between;
     padding-top: 100px;
 }
@@ -851,6 +921,7 @@ footer {
 
 .footerNav {
     display: flex;
+    margin: 0;
 }
 
 .footerNav a {
@@ -862,7 +933,19 @@ footer {
     justify-content: flex-end;
 }
 
-.footerNav a:nth-child(5) {
+.footerNav li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.footerNav li:nth-child(5) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footerNav li:nth-child(5) a {
     padding: 0 0px 0 30px;
     color: white;
     text-decoration: none;
@@ -892,27 +975,59 @@ footer {
     flex-direction: column;
     text-align: right;
     right: 0;
-    bottom: 55px;
+    bottom: 10px;
     background-color: #fff;
     border-top: 1px solid #ABBFC6;
     border-bottom: 1px solid #ABBFC6;
     border-radius: 5px;
 }
 
-.footNavItems a {
+.footNavItems li {
     border-bottom: 1px solid #ABBFC6;
     padding: 5px 50px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.footNavItems a {
     border-radius: 5px;
     text-align: none;
     color: black;
 }
 
-.footNavItems a:nth-last-child(1) {
+.footNavItems li:nth-last-child(1) {
     border: none;
 }
 
-.footNavItems a:hover {
+.footNavItems li:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footNavItems a:hover {
     text-decoration: none;
     color: white;
 }
+
+.comeToUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #13D1C2;
+    border-radius: 50px;
+    height: 70px;
+    width: 75px;
+    bottom: 30px;
+    right: 10px;
+    transition: all ease 0.5s;
+}
+
+.up{
+    font-size: 28px;
+}
+
+.comeToUp:hover{
+    transform: scale(1.1);
+}
+
+

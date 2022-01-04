@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,7 +56,7 @@
 </head>
 
 <body>
-    <header class="container-fluid header" style="background-image: url('<?php echo get_theme_file_uri();?>/assets/img/Header-bg.png')">
+    <header class="container-fluid login" style="background-image: url('<?php echo get_theme_file_uri();?>/assets/img/Header-bg.png')">
         <div class="container">
             <div class="row  topHead">
                 <div class="brandLogo">
@@ -83,7 +80,7 @@
                     'theme_location'  => 'primaryMenu',
                     'menu'            => 'topMenu',
                     'container'       => NULL,
-                    'menu_class'      => 'nav navMain',
+                    'menu_class'      => 'nav navLog',
                     'menu_id'         => 'navMenu'
                 ]); ?>
 
@@ -98,28 +95,7 @@
                             'menu_id'         => 'navMenu'
                         ]); ?>
                     </div>
-
-                    <a href="<?php home_url( ) ?>/login" class="btn lowercase">sign up</a>
                 </div>
-            </div>
-        </div>
-        <div class="container descr">
-            <div class="text-block">
-                <h1 class="block-title uppercase">
-                    lorem Ipsum Dolor sit amet
-                </h1>
-                <span class="block-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
-                </span>
-                <div class="btns-container">
-                    <a href="#" class="btn-blue uppercase">BUY NOW</a>
-                    <a href="#" class="btn-white header-btn">TRY FOR FREE</a>
-                </div>
-            </div>
-            <div class="media-block">
-                <video controls poster="<?php echo get_theme_file_uri();?>/assets/video/video_bg.png">
-                    <source src="<?php echo get_theme_file_uri();?>/assets/video/video.mp4" type="video/mp4">
-                </video>
             </div>
         </div>
     </header>

@@ -15,12 +15,39 @@ const errorMes = $(".error_message");
 const successMes = $(".success_message");
 
 
-const hamurgerItems = $(".navItems");
-const footHamurgerItems = $(".footNavItems");
-
-
 $(document).ready(function() {
     checkBtns(position);
+    if(scrollY === 0){
+        $(".comeToUp").css("opacity", 0);
+    }else{
+        $(".comeToUp").css("opacity", 1);
+    }
+
+    $("#navMenu a").click( function () {
+        var id  = $(this).attr('href');
+        var href = '';
+        if(id[0] === '/'){
+            href = id.slice(1);
+        }else{
+            href = id;
+        }
+        var top = $(href).offset().top;
+        console.log(top);
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
+    window.addEventListener('scroll', function(e){
+        if(scrollY === 0){
+            $(".comeToUp").css("opacity", 0);
+        }else{
+            $(".comeToUp").css("opacity", 1);
+        }
+    });
+
+    $('.comeToUp').click(() => {
+        $('html, body').animate({scrollTop:0}, 1500);
+    })
 });
 
 form.on('submit', formSend);
@@ -38,83 +65,27 @@ prev.click(() => {
 })
 
 
-$(".statistics").click(() => {
-    if ($(".statistics").hasClass("active")) {
-        $(".statist").css("display", "none");
-        $(".stat").removeClass("fa-caret-up");
-        $(".stat").addClass("fa-caret-down");
-        $(".statistics").removeClass("active");
+$(".selector").click(function(){
+    if ($(this).hasClass("active")) {
+        $(this).children('.statist').css("display", "none");
+        $(this).children('.btn-title').children('.i_caretd').children('.stat').removeClass("fa-caret-up");
+        $(this).children('.btn-title').children('.i_caretd').children('.stat').addClass("fa-caret-down");
+        $(this).removeClass("active");
     } else {
-        $(".statistics").addClass("active");
-        $(".statist").css("display", "flex");
-        $(".stat").removeClass("fa-caret-down");
-        $(".stat").addClass("fa-caret-up");
+        $(this).addClass("active");
+        $(this).children('.statist').css("display", "flex");
+        $(this).children('.btn-title').children('.i_caretd').children('.stat').removeClass("fa-caret-down");
+        $(this).children('.btn-title').children('.i_caretd').children('.stat').addClass("fa-caret-up");
     }
 });
 
-$(".inbox").click(() => {
-    if ($(".inbox").hasClass("active")) {
-        $(".box").css("display", "none");
-        $(".inb").removeClass("fa-caret-up");
-        $(".inb").addClass("fa-caret-down");
-        $(".inbox").removeClass("active");
-    } else {
-        $(".inbox").addClass("active");
-        $(".box").css("display", "flex");
-        $(".inb").removeClass("fa-caret-down");
-        $(".inb").addClass("fa-caret-up");
-    }
-});
 
-$(".team").click(() => {
-    if ($(".team").hasClass("active")) {
-        $(".comm").css("display", "none");
-        $(".command").removeClass("fa-caret-up");
-        $(".command").addClass("fa-caret-down");
-        $(".team").removeClass("active");
-    } else {
-        $(".team").addClass("active");
-        $(".comm").css("display", "flex");
-        $(".command").removeClass("fa-caret-down");
-        $(".command").addClass("fa-caret-up");
-    }
-});
 
-$(".settings").click(() => {
-    if ($(".settings").hasClass("active")) {
-        $(".pref").css("display", "none");
-        $(".sett").removeClass("fa-caret-up");
-        $(".sett").addClass("fa-caret-down");
-        $(".settings").removeClass("active");
-    } else {
-        $(".settings").addClass("active");
-        $(".pref").css("display", "flex");
-        $(".sett").removeClass("fa-caret-down");
-        $(".sett").addClass("fa-caret-up");
-    }
-});
-
-$(".feed").click(() => {
-    if ($(".feed").hasClass("active")) {
-        $(".wifi").css("display", "none");
-        $(".fe").removeClass("fa-caret-up");
-        $(".fe").addClass("fa-caret-down");
-        $(".feed").removeClass("active");
-    } else {
-        $(".feed").addClass("active");
-        $(".wifi").css("display", "flex");
-        $(".fe").removeClass("fa-caret-down");
-        $(".fe").addClass("fa-caret-up");
-    }
-});
-
-$(".bars").click(() => {
-    if (hamurgerItems.hasClass("openned")) {
-        hamurgerItems.removeClass("openned");
-        footHamurgerItems.removeClass("openned");
-    } else {
-        hamurgerItems.addClass("openned");
-        footHamurgerItems.addClass("openned");
+$(".burgSelector").click(function(){
+    if ($(this).children(".navCheck").hasClass("openned")) {
+        $(this).children(".navCheck").removeClass("openned");
+    } else  {
+        $(this).children(".navCheck").addClass("openned");
     }
 })
 
