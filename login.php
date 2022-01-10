@@ -1,10 +1,10 @@
 <?php
     get_header("login");
-    /* Template Name: Login */
+    /* Template Name: Sign */
 ?>
 <section>
-    
-    <?php the_content(); ?>
+    <?php the_content();
+    ?>
 </section>
 <?php
     get_footer();

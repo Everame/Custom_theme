@@ -1,5 +1,14 @@
 <?php
     get_header();
+    function sendMail(){
+        $message='</div>'.
+                    $_POST['message'].
+                 '</div>
+                 </span style="color: orange;">Contacts: '.
+                    $_POST['email'].' - '.$_POST['fName'].' '.$_POST['lastName'].' ('.$_POST['phone'].')'.
+                 '</span>';
+        wp_mail('ilyatarasov@bk.ru','Message from users DartService',$message);
+    }
 ?>
 <section class="easyUsefull container-fluid" id="home">
         <div class="container align-items-center easyText">
@@ -433,32 +442,40 @@
             <span class="previewDescrHelp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</br> incididunt labore et dolore magna</span>
         </div>
         <div class="form conatainer">
-            <form action="#" method="post" id="formBody">
+            <form method="POST" name="form" id="formBody">
                 <div class="formItem">
-                    <input type="text" id="formName" class="formInput req" placeholder="First Name">
-                    <input type="text" id="formLast" class="formInput req" placeholder="Last Name">
+                    <input type="text" name="fName" id="formName" class="formInput req" placeholder="First Name">
+                    <input type="text" name="lastName" id="formLast" class="formInput req" placeholder="Last Name">
                 </div>
                 <div class="formItem">
-                    <input type="text" id="formEmail" class="formInput req" placeholder="Email">
-                    <input type="text" id="formPhone" class="formInput req" placeholder="Phone">
+                    <input type="text" name="email" id="formEmail" class="formInput req" placeholder="Email">
+                    <input type="text" name="phone" id="formPhone" class="formInput req" placeholder="Phone">
                 </div>
                 <div class="formItem">
                     <textarea name="message" id="formMessage" class="formInputMessage req" placeholder="Message"></textarea>
                 </div>
                 <div class="formItem">
-                    <span class="error_message">Упс! Что-то пошло не так. Исправьте ошибки и попробуйте снова ;)</span>
+                    <span class="error_inputForm">Oops! Something went wrong, fix the errors and try again ;)</span>
+                </div>
+                <div class="formItem">
+                    <span class="error_notSended">Message not be sended! May be you are have some problem with internet connection...</span>
                 </div>
                 <div class="formItem">
                     <div class="agreement">
                         <input checked type="checkbox" name="checkbox" id="formCheckbox" class="formInputCh">
                         <label for="formCheckbox" class="agreementText ">subscribe to the newsletter</label>
                     </div>
-                    <button type="submit" class="uppercase formBtn">SEND</button>
+                    <button type="submit" name="send" value="click" id="submitBtn" class="uppercase formBtn">SEND</button>
                 </div>
                 <div class="formItem">
-                    <span class="success_message">Ваше сообщение было успешно отправлено!</span>
+                    <span class="success_message">Your message has been sent successfully!</span>
                 </div>
             </form>
+            <?php
+                if (isset($_POST['send'])) {
+                    sendMail();
+                }
+            ?>
         </div>
     </section>
     <div class="comeToUp">
@@ -467,3 +484,4 @@
 <?php
     get_footer();
 ?>
+

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,13 +61,15 @@
     <header class="container-fluid login" style="background-image: url('<?php echo get_theme_file_uri();?>/assets/img/Header-bg.png')">
         <div class="container">
             <div class="row  topHead">
-                <div class="brandLogo">
-                    <img class="logo" src="<?php echo get_theme_file_uri();?>/assets/img/Logo.png" alt="Logo">
-                    <div class="companyTitle">
-                        <span class="light">Dart</span>
-                        <span class="bold uppercase">Service manager</span>
+                <a href="<?php echo home_url(); ?>" class="brandlink">
+                    <div class="brandLogo">
+                        <img class="logo" src="<?php echo get_theme_file_uri();?>/assets/img/Logo.png" alt="Logo">
+                        <div class="companyTitle">
+                            <span class="light">Dart</span>
+                            <span class="bold uppercase">Service manager</span>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 
                 <div class="nav">

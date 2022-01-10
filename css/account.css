@@ -1,0 +1,94 @@
+.wpum-account-page{
+    width: 50%;
+    margin: 30px auto;
+}
+
+.wpum-form h2{
+    color: #061E37;
+}
+
+#wpum-submit-account-form label{
+    color: #061E37;
+}
+
+.wpum-uploaded-file-preview img{
+    width: 400px;
+    height: 210px;
+    margin: 10px 0;
+}
+.wpum-uploaded-file-preview a{
+   display: none;
+}
+
+.wpum-multiselect{
+    padding: 10px;
+}
+
+.field input{
+    color: #061E37;
+}
+
+.fileInput{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.viewInput{
+    display: flex;
+    position: relative;
+    background-color: #00E9B5;
+    cursor: pointer;
+    width: 40% !important;
+    border-radius: 10px;
+}
+
+.containerFileInput{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+.containerFileInput i{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    border-right: 2px solid white;
+    align-items: center;
+    justify-content: center;
+}
+
+.textFileInput{
+    display: flex;
+    width: 80%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formInput option{
+    color: #061E37;
+}
+
+.updateBtn{
+    color: white;
+    padding: 15px 35px;
+    background-color: #061E37;
+    border-radius: 5px;
+    border: none;
+    font-family: "Raleway light";
+    letter-spacing: 1px;
+}
+
+.wpum-account-navigation a{
+    color: #061E37;
+}
+
+.wpum-account-navigation a:hover{
+    text-decoration: underline !important;
+}
+
+#wpum-submit-password-form label{
+    color: #061E37;
+}

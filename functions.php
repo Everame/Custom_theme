@@ -2,15 +2,16 @@
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 add_action( 'wp_enqueue_scripts', 'dartServices_assets' );
 add_action( 'widgets_init', 'widget_sidebar_register' );
+add_action( 'admin_post_nopriv_contact_form', 'prefix_send_email_to_admin' );
 
-if ( function_exists('register_sidebar') )
-register_sidebar(array(
-    'name'          => 'Testing widget',
-    'id'            => "test",
-    'description'   => 'Test widget',
-    'before_widget' => 'div',
-    'after_widget' => 'div'
-));
+add_filter( 'wp_mail_from', 'vortal_wp_mail_from' );
+add_filter( 'wp_mail_content_type', function($content_type){
+	return "text/html";
+});
+
+function vortal_wp_mail_from( $email_address ){
+	return 'ilyatarasov@bk.ru';
+}
 
 function widget_sidebar_register(){
     register_sidebar(array(
@@ -28,10 +29,13 @@ function dartServices_assets() {
     wp_enqueue_style( 'mediaCSS', get_template_directory_uri() . '/css/media.css');
     wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style( 'loginForm', get_template_directory_uri() . '/css/loginForm.css');
+    wp_enqueue_style( 'profile', get_template_directory_uri() . '/css/profile.css');
+    wp_enqueue_style( 'account', get_template_directory_uri() . '/css/account.css');
 }
 
 function theme_register_nav_menu(){
     register_nav_menu( 'primaryMenu', 'Primary menu' );
+    register_nav_menu( 'userMenu', 'User menu' );
 	add_theme_support( "post-thumbnails", array("post") );
 	add_image_size( "serviceThumb", 30, 30, true );
     add_image_size( "commentsThumb", 70, 70, true );

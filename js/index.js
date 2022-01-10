@@ -10,13 +10,17 @@ const itemCount = item.length;
 const itemHeight = 240;
 const lastPosition = (itemCount - itemsShow) * itemHeight;
 
-const form = $(".form");
-const errorMes = $(".error_message");
+const form = $("#formBody");
+const errorMes = $(".error_inputForm");
 const successMes = $(".success_message");
 
 
 $(document).ready(function() {
     checkBtns(position);
+
+
+    $("#remembermelabel").addClass("agreementText");
+
     if(scrollY === 0){
         $(".comeToUp").css("opacity", 0);
     }else{
@@ -48,9 +52,44 @@ $(document).ready(function() {
     $('.comeToUp').click(() => {
         $('html, body').animate({scrollTop:0}, 1500);
     })
+
+    $('.nickname').click(function() {
+        if($('.userMenu').hasClass('open')){
+            $('.userMenu').removeClass('open');
+            $('.down').removeClass('fa-caret-up');
+            $('.down').addClass('fa-caret-down');
+        }else{
+            $('.userMenu').addClass('open');
+            $('.down').removeClass('fa-caret-down');
+            $('.down').addClass('fa-caret-up');
+        }
+    });
 });
 
-form.on('submit', formSend);
+form.submit(function(e){
+    let ok = false;
+    if(formSend()){
+        $.ajax({
+            type: "POST",
+            url: "#",
+            data: $(this).serialize()
+        }).done(function(){
+            ok = true;
+            successMes.css({
+                display: "block"
+            });
+            $(this).find('input').val('');
+            form.trigger('reset');
+        });
+        if(!ok){
+            $('error_notSended').css({
+                display: "block"
+            });
+        }
+    }else{
+        return 0;
+    }
+});
 
 next.click(() => {
     position -= itemHeight * itemsSlide;
@@ -90,20 +129,17 @@ $(".burgSelector").click(function(){
 })
 
 
-function formSend(e) {
-    e.preventDefault();
+function formSend() {
 
     let error = formValidate();
 
-    if (error === 0) {
-        successMes.css({
-            display: "block"
-        });
-    } else {
+    if (error !== 0) {
         errorMes.css({
             display: "block"
         });
+        return false;
     }
+    return true;
 }
 
 function formValidate() {

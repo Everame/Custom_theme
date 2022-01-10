@@ -24,6 +24,7 @@ header {
     height: 100px;
 }
 
+
 .header{
     height: 700px;
 }
@@ -36,6 +37,10 @@ header {
 
 .brandLogo {
     display: flex;
+}
+
+.brandlink:hover{
+    text-decoration: none;
 }
 
 .logo {
@@ -69,6 +74,7 @@ header {
     margin: 0 0 0 auto;
 }
 
+
 .nav li {
     display: flex;
     align-items: center;
@@ -90,6 +96,7 @@ header {
 .mediaNav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .burgSelector {
@@ -99,6 +106,10 @@ header {
 
 .openned {
     display: flex!important;
+}
+
+.open{
+    display: block!important;
 }
 
 .navItems {
@@ -851,7 +862,16 @@ header {
     background-color: #ABBFC6 !important;
 }
 
-.error_message {
+.error_inputForm {
+    display: none;
+    width: 100%;
+    color: #C0001E;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.error_notSended {
     display: none;
     width: 100%;
     color: #C0001E;
@@ -1029,5 +1049,47 @@ footer {
 .comeToUp:hover{
     transform: scale(1.1);
 }
+
+.avatar-60{
+    border-radius: 60px;
+    margin: 0;
+}
+
+.nickname{
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.userMenu{
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 150px;
+    right: 0;
+}
+
+.userUl{
+    margin: 0;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.userUl li{
+    list-style: none;
+    text-align: right;
+    padding: 10px;
+}
+
+.userUl li a{
+    color: #061E37;
+}
+
+.down{
+    color: #fff;
+}
+
+
 
 
