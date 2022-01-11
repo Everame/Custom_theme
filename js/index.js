@@ -66,20 +66,29 @@ $(document).ready(function() {
     });
 });
 
-form.submit(function(e){
+$('#submitBtn').click(function(e){
+    e.preventDefault();
     let ok = false;
     if(formSend()){
         $.ajax({
             type: "POST",
-            url: "#",
-            data: $(this).serialize()
-        }).done(function(){
-            ok = true;
-            successMes.css({
-                display: "block"
-            });
-            $(this).find('input').val('');
-            form.trigger('reset');
+            url: window.wp_data.ajax_url,
+            data: {
+                action : 'send_mail',
+                message : $('#formMessage').val(),
+                email : $('#formEmail').val(),
+                fName : $('#formName').val(),
+                lastName : $('#formLast').val(),
+                phone : $('#formPhone').val()
+            },
+            success: function (response) {
+                ok = true;
+                successMes.css({
+                    display: "block"
+                });
+                $(this).find('input').val('');
+                form.trigger('reset');
+            }
         });
         if(!ok){
             $('error_notSended').css({
@@ -90,6 +99,7 @@ form.submit(function(e){
         return 0;
     }
 });
+
 
 next.click(() => {
     position -= itemHeight * itemsSlide;
