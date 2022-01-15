@@ -58,6 +58,7 @@ body{
     padding: 23px;
     justify-content: center;
     cursor: pointer;
+    margin-top: 2px;
 }
 .buyBtn{
     font-family: "Raleway ExtraBold";

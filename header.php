@@ -141,9 +141,28 @@
                 </div>
             </div>
             <div class="media-block">
+            <?php
+                $video_posts = get_posts( array(
+                    'numberposts' => 1,
+                    'order'       => 'ASC',
+                    'post_type'   => 'video_preview',
+                    'suppress_filters' => true // подавление работы фильтров изменения SQL запроса
+                ) );
+
+                $published_video = wp_count_posts('video_preview')->publish;
+
+                if($published_video > 0){
+                    foreach( $video_posts as $post ){
+                        the_content();
+                    }
+                }else{
+            ?>
                 <video controls poster="<?php echo get_theme_file_uri();?>/assets/video/video_bg.png">
                     <source src="<?php echo get_theme_file_uri();?>/assets/video/video.mp4" type="video/mp4">
                 </video>
+            <?php
+                }
+            ?>
             </div>
         </div>
     </header>

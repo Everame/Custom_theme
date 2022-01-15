@@ -40,11 +40,11 @@
                 </ul>
 
                 <div class="media-row">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="https://vk.com/i.tarasov1920"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Everame"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/Everame"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://vk.com/i.tarasov1920"><i class="fab fa-dribbble"></i></a>
+                    <a href="https://vk.com/i.tarasov1920"><i class="fab fa-behance"></i></a>
                 </div>
             </div>
         </div>

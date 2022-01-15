@@ -1,6 +1,6 @@
 .tml-login{
     width: 15%;
-    margin: 130px auto;
+    margin: 220px auto;
 }
 
 .tml-register{
@@ -11,6 +11,11 @@
 .tml-lostpassword{
     width: 25%;
     margin: 18vh auto;
+}
+
+.tml-resetpass{
+    width: 25%;
+    margin: 130px auto;
 }
 
 .tml-label{

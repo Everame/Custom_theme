@@ -21,7 +21,7 @@
         font-size: 10px !important;
     }
     .btnContainer{
-        margin-top: 55px;
+        margin-top: 55px !important;
     }
 }
 @media(min-width: 1024px) and (max-width: 1279px) {
@@ -38,7 +38,7 @@
         font-size: 10px !important;
     }
     .btnContainer{
-        margin-top: 60px;
+        margin-top: 60px !important;
     }
 }
 @media(min-width: 1280px) and (max-width: 1300px) {
@@ -55,6 +55,6 @@
         font-size: 10px !important;
     }
     .btnContainer{
-        margin-top: 70px;
+        margin-top: 70px !important;
     }
 }

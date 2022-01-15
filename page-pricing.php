@@ -7,6 +7,39 @@
             <h1 class="easyTitle">Choose your plan</h1>
         </div>
     <div class="container buyPlans">
+        <?php
+            $plans_posts = get_posts( array(
+                'numberposts' => 0,
+                'order'       => 'ASC',
+                'post_type'   => 'products_plans',
+                'suppress_filters' => true // подавление работы фильтров изменения SQL запроса
+            ) );
+
+            $published_posts = wp_count_posts('products_plans')->publish;
+
+            if($published_posts > 0){
+                foreach( $plans_posts as $post ){
+            ?>
+            <div class="planContainer">
+                <div class="imgPlan">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+                <div class="planContent">
+                    <span class="titlePlan">
+                        <?php the_title(); ?>
+                    </span>
+                    <?php the_content(); ?>
+                </div>
+                <a href="<?php echo get_theme_file_uri();?>/products/Free Programm.txt" class="linkBtn" id="freeProg" download>
+                    <div class="btnContainer">
+                        <span class="buyBtn">Buy <span><?php echo get_post_meta( $post->ID, "price_of_plan", true ) ?></span></span>
+                    </div>
+                </a>
+            </div>
+            <?php
+                }
+            }else{
+        ?>
         <div class="planContainer">
             <div class="imgPlan">
                 <img src="<?php echo get_theme_file_uri();?>/assets/img/freePlan.jpg" alt="Free plan">
@@ -55,6 +88,7 @@
                 </div>
             </a>
         </div>
+        <?php } ?>
     </div>
 </section>
 <div class="bgDark">
