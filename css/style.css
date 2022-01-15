@@ -1089,7 +1089,9 @@ footer {
 .down{
     color: #fff;
 }
-
+.shorted{
+    top: calc(50% - 200px / 2) !important;
+}
 
 
 

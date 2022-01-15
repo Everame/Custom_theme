@@ -1,0 +1,60 @@
+@media(min-width: 0px) and (max-width: 575px) {
+    .buyPlans{
+        flex-direction: column;
+    }
+    .planContainer{
+        width: 100% !important;
+        margin-bottom: 60px;
+    }
+}
+@media(min-width: 576px) and (max-width: 1023px) {
+    .buyPlans{
+        justify-content: space-between !important;
+    }
+    .planContainer{
+        width: 45% !important;
+    }
+    .imgPlan{
+        height: 30% !important;
+    }
+    .planContent p{
+        font-size: 10px !important;
+    }
+    .btnContainer{
+        margin-top: 55px;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1279px) {
+    .buyPlans{
+        justify-content: space-between !important;
+    }
+    .planContainer{
+        width: 45% !important;
+    }
+    .imgPlan{
+        height: 30% !important;
+    }
+    .planContent p{
+        font-size: 10px !important;
+    }
+    .btnContainer{
+        margin-top: 60px;
+    }
+}
+@media(min-width: 1280px) and (max-width: 1300px) {
+    .buyPlans{
+        justify-content: space-between !important;
+    }
+    .planContainer{
+        width: 45% !important;
+    }
+    .imgPlan{
+        height: 30% !important;
+    }
+    .planContent p{
+        font-size: 10px !important;
+    }
+    .btnContainer{
+        margin-top: 70px;
+    }
+}

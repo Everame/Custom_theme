@@ -1,0 +1,183 @@
+body{
+    position: relative;
+}
+.buyPlans{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 80px 0;
+}
+.planContainer{
+    position: relative;
+    width: 35%;
+    border-radius: 50px;
+    background-color: #18CACD;
+    box-shadow: 0 0 13px 0px #000;
+}
+.imgPlan{
+    width: 100%;
+    height: 40%;
+}
+.imgPlan img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 50px 0 0;
+}
+.planContent{
+    padding: 10px;
+    height: 50%;
+}
+.titlePlan{
+    font-size: 25px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+.planContent p{
+    position: relative;
+    font-size: 14px;
+    font-family: 'Raleway Medium';
+    width: 80%;
+    margin: 10px auto;
+}
+.planContent p::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 0px;
+    width: 17px;
+    height: 12px;
+    border-right: 3px solid #2f8f36;
+    border-top: 3px solid #2f8f36;
+    transform: rotate(135deg);
+}
+.btnContainer{
+    display: flex;
+    width: 100%;
+    background-color: #061E37;
+    border-radius: 0 0 50px 50px;
+    padding: 23px;
+    justify-content: center;
+    cursor: pointer;
+}
+.buyBtn{
+    font-family: "Raleway ExtraBold";
+    font-size: 25px;
+    bottom:0;
+}
+.buyBtn span{
+    font-family: "Raleway ExtraBold";
+    font-size: 25px;
+    color: orange;
+    bottom:0;
+}
+.bgDark{
+    display: none;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.freeModal{
+    display: none;
+    width: 700px;
+    height: 250px;
+    background-color: #18CACD;
+    border-radius: 50px;
+    top: calc(50% - 250px / 2);
+    left: calc(50% - 700px / 2);
+    align-items: center;
+    justify-content: center;
+}
+.modalContent{
+    width: 90%;
+}
+.modalContent a{
+    margin-left: 87%;
+}
+.modalContent a:hover{
+    background-color: #092c52;
+}
+.modalContent p{
+    width: 100%;
+    color: #0e6855;
+    border: 2px solid #0a886d;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin: 25px 0;
+}
+.buyModal{
+    display: none;
+    width: 700px;
+    height: 400px;
+    background-color: #18CACD;
+    border-radius: 50px;
+    top: calc(50% - 400px / 2);
+    left: calc(50% - 700px / 2);
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.buyModalContent{
+    width: 90%;
+}
+.successMessage{
+    display: none;
+    width: 100%;
+    color: #0e6855;
+    border: 2px solid #0a886d;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-bottom: 25px;
+}
+#buyForm{
+    display: flex;
+    flex-direction: column;
+}
+.buyModalContent p{
+    margin-top: 40px;
+}
+#buyForm input{
+    margin: 10px 0;
+}
+#buyForm small{
+    color: black;
+    margin-bottom: 20px;
+}
+#buyBtn{
+    width: 20%;
+    margin-left: 80%;
+    cursor: pointer;
+}
+.circleClose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+    transition: color ease 0.5s;
+}
+
+.circleClose:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.circleClose i{
+    color: #1c3e63;
+}
+.linkBtn:hover{
+    color: white;
+}
+
+

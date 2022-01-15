@@ -1,13 +1,15 @@
 <footer>
         <div class="container">
             <div class="row  footerHead">
-                <div class="brand">
-                    <img class="footerLogo" src="<?php echo get_theme_file_uri();?>/assets/img/Logo.png" alt="Logo">
-                    <div class="companyTitle">
-                        <span class="light">Dart</span>
-                        <span class="bold uppercase">Service manager</span>
+                <a href="<?php echo home_url(); ?>" class="brandlink">
+                    <div class="brand">
+                        <img class="footerLogo" src="<?php echo get_theme_file_uri();?>/assets/img/Logo.png" alt="Logo">
+                        <div class="companyTitle">
+                            <span class="light">Dart</span>
+                            <span class="bold uppercase">Service manager</span>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <?php wp_nav_menu([
                     'theme_location'  => 'primaryMenu',

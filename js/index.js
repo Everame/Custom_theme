@@ -1,5 +1,7 @@
 let position = 0;
-const itemsShow = 2;
+let itemsShow = 2;
+let itemHeight = 240;
+const windowWidth = $(window).width();
 const itemsSlide = 1;
 const item = $(".slider-item");
 const track = $(".slider-track");
@@ -7,7 +9,10 @@ const container = $(".slider-container");
 const next = $(".next");
 const prev = $(".prev");
 const itemCount = item.length;
-const itemHeight = 240;
+if(windowWidth > 0 && windowWidth < 575){
+    itemsShow = 1;
+    itemHeight = 193;
+}
 const lastPosition = (itemCount - itemsShow) * itemHeight;
 
 const form = $("#formBody");
@@ -17,6 +22,59 @@ const successMes = $(".success_message");
 
 $(document).ready(function() {
     checkBtns(position);
+
+    $('#freeProg').click(function(){
+        $('.bgDark').css({
+            display: "block"
+        });
+        $('.freeModal').css({
+            display: "flex"
+        });
+    });
+
+    $('#paidProg').click(function(e){
+        e.preventDefault();
+        $('.bgDark').css({
+            display: "block"
+        });
+        $('.buyModal').css({
+            display: "flex"
+        });
+    });
+
+    $('.freeClose').click(function(e){
+        e.preventDefault();
+        $('.bgDark').css({
+            display: "none"
+        });
+        $('.freeModal').css({
+            display: "none"
+        });
+    });
+
+    $('.paidClose').click(function(e){
+        e.preventDefault();
+        $('.bgDark').css({
+            display: "none"
+        });
+        $('.buyModal').css({
+            display: "none"
+        });
+        $('.buyModal').css({
+            height: '400px'
+        });
+        $('.buyModal').removeClass('shorted');
+        $('.successMessage').css({
+            display: "none"
+        });
+        $('.buyDescr').css({
+            display: "flex"
+        });
+        $('#buyForm').css({
+            display: "flex"
+        });
+
+    });
 
 
     $("#remembermelabel").addClass("agreementText");
@@ -66,6 +124,46 @@ $(document).ready(function() {
     });
 });
 
+$('#buyBtn').click(function(e){
+    e.preventDefault();
+    let ok = false;
+    if(paidSend()){
+        $.ajax({
+            type: "POST",
+            url: window.wp_data.ajax_url,
+            data: {
+                action : 'buy_Product',
+                mail : $('#mail').val()
+            },
+            success: function () {
+                ok = true;
+                $('.buyModal').css({
+                    height: '200px'
+                });
+                $('.buyModal').addClass('shorted');
+                $('.successMessage').css({
+                    display: "flex"
+                });
+                $('.buyDescr').css({
+                    display: "none"
+                });
+                $('#buyForm').css({
+                    display: "none"
+                });
+                $(this).find('input').val('');
+                form.trigger('reset');
+            }
+        });
+        if(!ok){
+            $('error_notSended').css({
+                display: "block"
+            });
+        }
+    }else{
+        return 0;
+    }
+});
+
 $('#submitBtn').click(function(e){
     e.preventDefault();
     let ok = false;
@@ -81,7 +179,7 @@ $('#submitBtn').click(function(e){
                 lastName : $('#formLast').val(),
                 phone : $('#formPhone').val()
             },
-            success: function (response) {
+            success: function () {
                 ok = true;
                 successMes.css({
                     display: "block"
@@ -138,6 +236,49 @@ $(".burgSelector").click(function(){
     }
 })
 
+function paidSend() {
+    let error = paidValidate();
+
+    if (error !== 0) {
+        $('.buyModal').css({
+            height: '450px'
+        });
+        errorMes.css({
+            display: "block"
+        });
+        return false;
+    }
+    return true;
+}
+
+function paidValidate() {
+    let error = 0;
+
+    errorMes.css({
+        display: "none"
+    });
+
+    const res = $(".res");
+
+    for (let i = 0; i < res.length; i++) {
+        const inputS = res[i];
+
+        removeError(inputS);
+        if (inputS.id === "formEmail") {
+            if (emailValidate(inputS)) {
+                addError(inputS);
+                error++;
+            }
+        }else {
+            if (inputS.value === "") {
+                addError(inputS);
+                error++;
+            }
+        }
+    }
+
+    return error;
+}
 
 function formSend() {
 
@@ -164,7 +305,6 @@ function formValidate() {
     });
 
     const req = $(".req");
-    const subBtn = $(".formBtn")
 
     for (let i = 0; i < req.length; i++) {
         const input = req[i];

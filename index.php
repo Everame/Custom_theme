@@ -51,7 +51,7 @@
             <?php } ?>
         </div>
         <div class="container btn-block">
-            <a href="/pricing" class="btn-green">Get Started</a>
+            <a href="<?php echo home_url(); ?>/pricing" class="btn-green">Get Started</a>
         </div>
     </section>
     <img src="<?php echo get_theme_file_uri();?>/assets/img/counts.png" alt="counts" class="counts">
@@ -205,7 +205,7 @@
                     <h1 class="testiTitle">What our customers have to say about us.</h1>
                     <span class="testiDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna</span>
                 </div>
-                <a href="#" class="btn-blue uppercase w170 semiBold">Get Started</a>
+                <a href="<?php echo home_url(); ?>/pricing" class="btn-blue uppercase w170 semiBold">Get Started</a>
             </div>
             <div class="testiSlider">
                 <div class="wrapper">
@@ -466,6 +466,42 @@
     </section>
     <div class="comeToUp">
         <i class="fa fa-chevron-up up" aria-hidden="true"></i>
+    </div>
+    <div class="bgDark">
+            <div class="modal freeModal">
+                <div class="modalContent">
+                    <p>
+                        Thank you for download our product! We will happy, if you are wrote comments about us =)
+                    </p>
+                    <a href="#" class='btn-blue freeClose'>OK</a>
+                </div>
+                <div class="circleClose freeClose">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="modal buyModal">
+                <div class="buyModalContent">
+                <p class="successMessage">
+                    Thank you for buy our product! It's help do our work better. We will happy, if you are wrote comments about us =)
+                </p>
+                <p class="buyDescr">
+                    Specify the details of your card and mail, where the link to download the application will come
+                </p>
+                <form id="buyForm">
+                    <input type="text" name="dataCard" class="formInput res" placeholder="Enter the card number">
+                    <input type="text" name="mail"  class="formInput res" id="mail" placeholder="Enter the email">
+                    <span class="error_inputForm">Oops! Something went wrong, fix the errors and try again ;)</span>
+                    <span class="error_notSended">Message not be sended! May be you are have some problem with internet connection...</span>
+                    <small>
+                        **Do not enter the data of a real card! The modal window is made only in order to create the appearance of payment, the message will come to the mail in any case**
+                    </small>
+                    <button type="submit" class="formBtn" id="buyBtn">OK</button>
+                </form>
+            </div>
+            <div class="circleClose paidClose">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </div>
     </div>
 <?php
     get_footer();

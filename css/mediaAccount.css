@@ -1,0 +1,64 @@
+@media(min-width: 0px) and (max-width: 575px) {
+    .wpum-account-page{
+        margin: 40px auto !important;
+        width: 90% !important;
+    }
+    #fullHd{
+        display: none !important;
+    }
+    #accountTabs i{
+        color: #000;
+    }
+    #accountTabs ul li{
+        text-align: left;
+    }
+    #navMenu{
+        z-index: 1;
+    }
+    .wpum_one_third{
+        width: 40% !important;
+    }
+    .wpum-uploaded-file-preview img{
+        width: 300px !important;
+        height: 180px !important;
+    }
+    .field .viewInput{
+        width: 50% !important;
+    }
+    .textFileInput{
+        font-size: 13px !important;
+    }
+    .fieldset-user_avatar img{
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+@media(min-width: 576px) and (max-width: 1024px) {
+    .wpum-account-page{
+        margin: 40px auto !important;
+        width: 80% !important;
+    }
+    #accountTabs{
+        display: none !important;
+    }
+    #navMenu{
+        z-index: 1;
+    }
+    .wpum_one_third{
+        width: 30% !important;
+    }
+    .wpum-uploaded-file-preview img{
+        width: 300px !important;
+        height: 180px !important;
+    }
+    .field .viewInput{
+        width: 50% !important;
+    }
+    .textFileInput{
+        font-size: 13px !important;
+    }
+    .fieldset-user_avatar img{
+        width: 80px !important;
+        height: 80px !important;
+    }
+}

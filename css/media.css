@@ -1,6 +1,12 @@
 @media(min-width: 0px) and (max-width: 575px) {
+    .selector{
+        margin-top: 20px;
+    }
     .easyText {
-        margin: 30px 0px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .easyDescr {
         font-size: 14px !important;
@@ -11,11 +17,18 @@
         flex-direction: column;
         align-items: center;
         height: 600px !important;
+        margin: 60px 0;
     }
     .avatar {
         width: 50px !important;
         height: 50px !important;
         margin-bottom: 10px !important;
+    }
+    .cards-block{
+        display: flex;
+        align-items: center;
+        height: 20% !important;
+        margin-top: 30px;
     }
     .cardTitle {
         font-size: 10px !important;
@@ -58,21 +71,39 @@
         font-size: 25px;
     }
     .btn-blue {
-        font-size: 10px;
+        font-size: 9px;
     }
     .btn-white {
-        font-size: 10px;
+        font-size: 9px;
     }
     .statement {
         font-size: 10px;
-        height: 90%!important;
+        height: 80%!important;
     }
     .name {
-        height: 10%!important;
         font-size: 11px;
+        height: 20%!important;
     }
     .slider-btns {
         left: 28%!important;
+        height: 205px !important;
+    }
+    .size-serviceThumb{
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .title-text{
+        font-size: 14px;
+    }
+    .wp-image-68{
+        width: 100px;
+        height: 75px;
+    }
+    .wp-block-image figure{
+        width: 100px !important;
+    }
+    .statist p{
+        font-size: 12px;
     }
     .parag-1 {
         font-size: 13px;
@@ -82,9 +113,14 @@
     }
     .testiTitle {
         font-size: 25px;
+        text-align: center;
     }
     .testiDescr {
-        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 !important;
     }
     .footerNav {
         display: none!important;
@@ -123,6 +159,9 @@
     .workerDescr {
         width: 300px!important;
     }
+    .workerDescr p {
+        width: 300px!important;
+    }
     .form {
         width: 300px!important;
     }
@@ -145,95 +184,74 @@
     }
     .testiText {
         width: 100%!important;
-        display: flex!important;
+        display: block!important;
         flex-direction: row!important;
-        height: 50%;
+        height: 50% !important;
         align-items: center;
         justify-content: center;
     }
+    .slider-item{
+        height: 150px !important;
+    }
+    .wrapper{
+        height: 200px !important;
+    }
+    .testiMediaBlock{
+        display: block !important;
+        margin: 0 0 20px 0;
+    }
     .w170 {
         height: 70px;
-        margin-left: 40px;
+        margin-left: 70px;
+        margin-top: 20px;
     }
     .testiSlider {
         width: 100%!important;
         height: 50%!important;
     }
-}
-
-@media(min-width: 576px) and (max-width: 767px) {
-    .container {
-        max-width: 500px!important;
-    }
-    .media-block {
-        display: none;
-    }
-    .text-block {
-        width: 100%!important;
-    }
-    .nav {
+    .userAvatar{
         display: none !important;
     }
-    .burgSelector {
-        display: flex!important;
+    .block-body{
+        font-size: 17px !important;
     }
-    .block-title {
-        font-size: 25px;
+    .buyModal{
+        width: 300px !important;
+        top: calc(50% - 400px / 2);
+        left: calc(50% - 300px / 2) !important;
     }
-    .btn-blue {
-        font-size: 15px;
+    .buyDescr{
+        font-size: 10px !important;
+        margin-bottom: 0 !important;
     }
-    .btn-white {
-        font-size: 15px;
+    #buyForm input{
+        padding: 4px 5px !important;
+        width: 100% !important;
     }
-    .statement {
-        font-size: 10px;
-        height: 90%!important;
+    #buyForm small{
+        font-size: 10px !important;
     }
-    .name {
-        height: 10%!important;
-        font-size: 11px;
+    #buyBtn{
+        width: 40% !important;
+        margin-left: 60% !important;
+        padding: 10px 20px !important;
     }
-    .slider-btns {
-        left: 28%!important;
+    .successMessage{
+        font-size: 12px !important;
     }
-    .parag-1 {
-        font-size: 13px;
+    .freeModal{
+        width: 300px !important;
+        top: calc(50% - 250px / 2) !important;
+        left: calc(50% - 300px / 2) !important;
     }
-    .parag-2 {
-        font-size: 13px;
+    .modalContent p{
+        font-size: 12px !important; 
     }
-    .testiTitle {
-        font-size: 25px;
-    }
-    .testiDescr {
-        font-size: 15px;
-    }
-    .footerNav {
-        display: none!important;
-    }
-    .wrapper-text {
-        width: 450px!important;
-    }
-    .slider-track-text {
-        transform: translateX(-450px);
-    }
-    .workerName {
-        width: 450px!important;
-    }
-    .workerDescr {
-        width: 450px!important;
-    }
-    .form {
-        width: 450px!important;
-    }
-    .card {
-        margin-left: 10px;
-    }
-    .cardDescr {
-        font-size: 13px;
+    .modalContent a{
+        margin-left: 73% !important;
     }
 }
+
 
 @media(min-width: 768px) and (max-width: 991px) {
     .container {
@@ -248,6 +266,7 @@
     }
     .burgSelector {
         display: flex!important;
+        margin: 0 15px;
     }
     .block-title {
         font-size: 25px;

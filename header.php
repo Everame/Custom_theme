@@ -136,8 +136,8 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
                 </span>
                 <div class="btns-container">
-                    <a href="#" class="btn-blue uppercase">BUY NOW</a>
-                    <a href="#" class="btn-white header-btn">TRY FOR FREE</a>
+                    <a href="#" class="btn-blue uppercase" id="paidProg">BUY NOW</a>
+                    <a href="<?php echo get_theme_file_uri();?>/products/Free Programm.txt" class="btn-white header-btn" id="freeProg" download>TRY FOR FREE</a>
                 </div>
             </div>
             <div class="media-block">

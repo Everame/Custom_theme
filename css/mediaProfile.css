@@ -1,0 +1,47 @@
+@media(min-width: 0px) and (max-width: 575px) {
+    .login{
+        height: 100px !important;
+    }
+    .login .container{
+        max-width: 500px !important;
+    }
+    .userMenu{
+        z-index: 5;
+    }
+    .wpum-profile-page{
+        margin: 30px auto !important;
+        width: 70% !important;
+        z-index: 10;
+    }
+    #header-cover-image{
+        height: 200px !important;
+    }
+    #header-avatar-container{
+        text-align: left;
+    }
+    #header-avatar-container a{
+        height: 60px !important;
+        width: 60px !important;
+    }
+    #header-avatar-container a img{
+        height: 60px !important;
+        width: 60px !important;
+    }
+    #header-name-container h2{
+        font-size: 17px !important;
+    }
+    #header-name-container h2 a small{
+        font-size: 10px !important;
+    }
+    .group-title{
+        font-size: 15px !important;
+    }
+    td{
+        font-size: 13px !important;
+    }
+}
+@media(min-width: 576px) and (max-width: 1280px) {
+    .wpum-profile-page{
+        width: 40% !important;
+    } 
+}

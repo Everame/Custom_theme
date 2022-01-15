@@ -5,6 +5,8 @@ add_action( 'widgets_init', 'widget_sidebar_register' );
 add_action( 'admin_post_nopriv_contact_form', 'prefix_send_email_to_admin' );
 add_action('wp_ajax_send_mail'       , 'sendMail');
 add_action('wp_ajax_nopriv_send_mail', 'sendMail');
+add_action('wp_ajax_buy_Product'       , 'buy_Product');
+add_action('wp_ajax_nopriv_buy_Product', 'buy_Product');
 add_action('wp_head','js_variables');
 
 add_filter( 'wp_mail_from', 'vortal_wp_mail_from' );
@@ -30,10 +32,15 @@ function dartServices_assets() {
     
     wp_enqueue_style( 'fontAwesome', get_template_directory_uri() . '/assets/fonts/fontawesome-free-5.15.4-web/css/all.css');
     wp_enqueue_style( 'mediaCSS', get_template_directory_uri() . '/css/media.css');
+    wp_enqueue_style( 'mediaProfile', get_template_directory_uri() . '/css/mediaProfile.css');
+    wp_enqueue_style( 'mediaAccount', get_template_directory_uri() . '/css/mediaAccount.css');
+    wp_enqueue_style( 'mediaLoginForm', get_template_directory_uri() . '/css/mediaLoginForm.css');
+    wp_enqueue_style( 'mediaPricing', get_template_directory_uri() . '/css/mediaPricing.css');
     wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style( 'loginForm', get_template_directory_uri() . '/css/loginForm.css');
     wp_enqueue_style( 'profile', get_template_directory_uri() . '/css/profile.css');
     wp_enqueue_style( 'account', get_template_directory_uri() . '/css/account.css');
+    wp_enqueue_style( 'pricing', get_template_directory_uri() . '/css/pricing.css');
 }
 
 function theme_register_nav_menu(){
@@ -65,6 +72,13 @@ function sendMail(){
                 $_REQUEST['email'].' - '.$_REQUEST['fName'].' '.$_REQUEST['lastName'].' ('.$_REQUEST['phone'].')'.
              '</span>';
     wp_mail('ilyatarasov@bk.ru','Message from users DartService',$message);
+    wp_die();
+}
+
+function buy_Product(){
+    $message='<div>Thank you for buying our product!</div>
+              <a href="https://disk.yandex.ru/d/wTBnOPawKC3hgQ">Your programm</a>';
+    wp_mail($_REQUEST['mail'],'Link for download paid programm DartService manager',$message);
     wp_die();
 }
 
